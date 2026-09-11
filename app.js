@@ -27,8 +27,7 @@
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
-      var next =
-        document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', next);
       try {
         localStorage.setItem('cp-theme', next);
@@ -44,9 +43,7 @@
 
   function buildMobileNav() {
     if (!mobileMenu) return;
-    var links = Array.prototype.slice.call(
-      document.querySelectorAll('.site-nav a'),
-    );
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
     var list = document.createElement('ul');
     links.forEach(function (link) {
       var li = document.createElement('li');
@@ -141,13 +138,17 @@
     sections.forEach(function (section) {
       spy.observe(section);
     });
-    window.addEventListener('scroll', function () {
-      if (spyTimer) return;
-      spyTimer = window.setTimeout(function () {
-        updateSpy();
-        spyTimer = null;
-      }, 90);
-    }, { passive: true });
+    window.addEventListener(
+      'scroll',
+      function () {
+        if (spyTimer) return;
+        spyTimer = window.setTimeout(function () {
+          updateSpy();
+          spyTimer = null;
+        }, 90);
+      },
+      { passive: true },
+    );
   }
 
   /* ---------- Scroll reveal ---------- */
@@ -204,11 +205,14 @@
         }, 1800);
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          done(true);
-        }, function () {
-          fallbackCopy(text, done);
-        });
+        navigator.clipboard.writeText(text).then(
+          function () {
+            done(true);
+          },
+          function () {
+            fallbackCopy(text, done);
+          },
+        );
       } else {
         fallbackCopy(text, function (ok) {
           done(ok);
