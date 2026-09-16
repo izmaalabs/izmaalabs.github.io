@@ -25,6 +25,20 @@
     }
   }
 
+  /* IZMΛΛ Labs wordmark — swap the theme-aware variant (dark-first default). */
+  var WORDMARK_LIGHT = 'izmaalabs-wordmark.svg';
+  var WORDMARK_DARK = 'izmaalabs-wordmark-dark.svg';
+  function applyWordmark() {
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    var marker = isLight ? WORDMARK_LIGHT : WORDMARK_DARK;
+    var imgs = document.querySelectorAll('[data-wordmark]');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      var src = img.getAttribute('src') || '';
+      img.setAttribute('src', src.replace(/izmaalabs-wordmark(?:-dark)?\.svg$/, marker));
+    }
+  }
+
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
@@ -33,9 +47,11 @@
         localStorage.setItem('cp-theme', next);
       } catch (err) {}
       renderThemeIcon();
+      applyWordmark();
     });
   }
   renderThemeIcon();
+  applyWordmark();
 
   /* ---------- Mobile menu ---------- */
   var menuToggle = document.getElementById('menu-toggle');
