@@ -1,4 +1,4 @@
-/* IZMΛΛ Labs × ChemPrep — site behavior
+/* IZMΛΛ Labs — site behavior
    Vanilla JS only: theme toggle, mobile menu, scrollspy, reveal, FAQ, copy. */
 
 (function () {

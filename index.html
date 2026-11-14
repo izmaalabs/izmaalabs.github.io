@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IZMΛΛ Labs — Instrument-grade chemistry software</title>
+    <title>IZMΛΛ Labs — Offline-first desktop software</title>
     <meta
       name="description"
-      content="IZMΛΛ Labs — a small studio making instrument-grade, offline-first desktop software. Flagship product: ChemPrep, a native chemistry preparation workspace. No cloud, no account, no telemetry."
+      content="IZMΛΛ Labs is an independent software studio building precise, offline-first desktop tools for high-stakes work — ChemPrep for chemistry exam preparation and TraderPulse for trading and tax management."
     />
     <meta name="theme-color" content="#121210" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://izmaalabs.github.io/" />
     <meta property="og:site_name" content="IZMΛΛ Labs" />
-    <meta property="og:title" content="IZMΛΛ Labs — Small studio. Instrument-grade chemistry software." />
+    <meta property="og:title" content="IZMΛΛ Labs — Offline-first desktop software" />
     <meta
       property="og:description"
-      content="Precise, offline-first desktop tools for high-stakes chemistry. Flagship product: ChemPrep — Rust native core, React surface, no account, no cloud, no telemetry."
+      content="An independent studio building precise, local-first desktop software. Flagship: ChemPrep for chemistry exam preparation. In development: TraderPulse for trading and tax. No cloud, no account, no telemetry."
     />
     <link rel="icon" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,16 +56,15 @@
         <nav class="site-nav" aria-label="Primary">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#craft">Craft</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div class="site-header__actions">
           <a class="header-pill" href="/chemprep-releases/">
-            ChemPrep<span class="header-pill__v" aria-hidden="true">7.0</span>
+            ChemPrep<span class="header-pill__v" aria-hidden="true">v7.4</span>
           </a>
           <button
             id="theme-toggle"
@@ -145,23 +144,23 @@
             </span>
             <h1 class="hero__title" id="hero-title">
               Small studio.<br />
-              <span class="gradient-text">Instrument-grade chemistry software.</span>
+              <span class="gradient-text">Sharp, offline-first desktop software.</span>
             </h1>
             <p class="hero__lead">
-              We make precise, offline-first desktop tools for exam-grade chemistry.
-              ChemPrep, our flagship, is a Rust-native workspace with a mock-exam
-              simulator, six question types, deep analytics and spaced-repetition
-              review — in one binary, entirely on your machine.
+              We build precise, local-first tools for high-stakes work. ChemPrep
+              brings exam-grade chemistry preparation into one Rust-native binary;
+              TraderPulse is our trading and tax workspace, in development. Same
+              standard across both: fast, quiet, and entirely on your machine.
             </p>
             <div class="hero__cta">
-              <a class="btn btn--primary" href="/chemprep-releases/">
-                Explore ChemPrep
+              <a class="btn btn--primary" href="#products">
+                Explore our products
                 <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M6 10 14 2" />
                   <path d="M8 2h6v6" />
                 </svg>
               </a>
-              <a class="btn btn--ghost" href="#craft">See what we build</a>
+              <a class="btn btn--ghost" href="#about">Meet the studio</a>
             </div>
             <ul class="hero__platform">
               <li>Windows · Linux</li>
@@ -175,19 +174,19 @@
                 <span class="app-frame__dots" aria-hidden="true">
                   <i></i><i></i><i></i>
                 </span>
-                <span class="app-frame__title">ChemPrep — first run</span>
-                <span class="app-frame__ref">v7.0 · offline</span>
+                <span class="app-frame__title">ChemPrep — flagship workspace</span>
+                <span class="app-frame__ref">v7.4 · offline</span>
               </div>
               <img
                 class="app-frame__shot"
-                src="assets/WelcomePage.png"
-                alt="ChemPrep first-run welcome screen introducing the workspace"
+                src="assets/DashboardPage.png"
+                alt="ChemPrep dashboard showing a question bank, analytics and review widgets"
                 width="1366"
                 height="737"
               />
             </div>
             <figcaption class="visually-hidden">
-              ChemPrep first-run welcome — a local-first workspace that needs no account and no connection.
+              ChemPrep dashboard — question bank, analytics and spaced-repetition review in one local-first workspace.
             </figcaption>
           </figure>
         </div>
@@ -197,7 +196,7 @@
         <div class="metrics__inner">
           <div class="metric reveal">
             <span class="metric__value">100%</span>
-            <span class="metric__label">offline-first<br />no cloud sync — your data stays local</span>
+            <span class="metric__label">offline-first<br />every product runs fully on your machine</span>
           </div>
           <div class="metric reveal">
             <span class="metric__value">0</span>
@@ -209,7 +208,7 @@
           </div>
           <div class="metric reveal">
             <span class="metric__value">Rust</span>
-            <span class="metric__label">native core<br />one lightweight desktop binary</span>
+            <span class="metric__label">native core<br />fast, small, memory-safe desktop builds</span>
           </div>
         </div>
       </section>
@@ -217,17 +216,17 @@
       <section class="band" id="about" aria-labelledby="about-title">
         <div class="band__inner">
           <div class="band__copy reveal">
-            <span class="eyebrow">About</span>
+            <span class="eyebrow">The studio</span>
             <h2 class="band__title" id="about-title">
               Local by default.<br />
               <span class="gradient-text">Precise by design.</span>
             </h2>
             <p class="band__lead">
-              IZMΛΛ Labs builds desktop software for high-stakes chemistry
-              preparation. Study tools should be quiet, private and fast — so
-              everything is local-first: your questions, analytics and reviews
-              live in a workspace folder you own. No cloud, no telemetry, no data
-              to sell.
+              IZMΛΛ Labs is an independent studio building desktop software for
+              high-stakes work — the kind where focus, privacy and speed matter
+              more than flash. Every product is local-first: your data lives in a
+              folder you own, not on someone else's server. No cloud, no telemetry,
+              no data to sell.
             </p>
           </div>
           <ul class="band__grid reveal">
@@ -251,82 +250,44 @@
         </div>
       </section>
 
-      <section class="craft section" id="craft" aria-labelledby="craft-title">
+      <section class="section" id="products" aria-labelledby="products-title">
         <div class="section__head reveal">
-          <span class="eyebrow">Flagship product</span>
-          <h2 class="section__title" id="craft-title">ChemPrep. The craft, distilled.</h2>
+          <span class="eyebrow">Products</span>
+          <h2 class="section__title" id="products-title">Two products. One philosophy.</h2>
           <p class="section__lead">
-            One flagship product, engineered like a lab instrument — a Rust core
-            with a fluid React surface, and every byte of your work kept local.
+            Different domains, same standards: native performance, quiet
+            interfaces, and complete ownership of your data.
           </p>
         </div>
 
-        <div class="craft__article reveal">
-          <figure class="app-frame-wrap">
-            <div class="app-frame">
-              <div class="app-frame__bar">
-                <span class="app-frame__dots" aria-hidden="true">
-                  <i></i><i></i><i></i>
-                </span>
-                <span class="app-frame__title">ChemPrep — workspace</span>
-                <span class="app-frame__ref">MCQ-ORG-0001</span>
-              </div>
-              <img
-                class="app-frame__shot"
-                src="assets/DashboardPage.png"
-                alt="ChemPrep dashboard showing a question bank, analytics and review widgets"
-                width="1366"
-                height="737"
-              />
+        <div class="products__grid reveal">
+          <article class="product-card">
+            <div class="product-card__head">
+              <span class="product-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 3h6" />
+                  <path d="M10 3v6l-5 8.5A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.5L14 9V3" />
+                  <path d="M7.5 15h9" />
+                </svg>
+              </span>
+              <span class="product-card__title">
+                <span class="product-card__name">ChemPrep</span>
+                <span class="product-card__tag">Chemistry exam preparation</span>
+              </span>
+              <span class="product-card__status">Available now</span>
             </div>
-            <figcaption class="visually-hidden">
-              ChemPrep dashboard — question bank, analytics and spaced-repetition review in one local-first workspace.
-            </figcaption>
-          </figure>
-
-          <div class="craft__body">
-            <h3 class="craft__title">
-              A question bank, an exam hall and a study partner — in one binary.
-            </h3>
-            <p class="craft__text">
-              ChemPrep pairs a Rust-native core with a fast, dark-chrome interface.
-              Everything runs on your machine: your questions, analytics, mock
-              exams and daily reviews. It starts in milliseconds and stays out of
-              the way while you work.
+            <p class="product-card__lead">
+              A complete preparation workspace for high-stakes chemistry exams: a
+              question bank, a mock-exam simulator, deep analytics and
+              spaced-repetition review — in one binary, entirely on your machine.
             </p>
-            <ul class="craft__points">
-              <li>
-                <svg class="craft__check" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
-                <span><strong>Six question types</strong> — MCQ, MSQ, NAT, Assertion–Reasoning, Match-the-following and rich-text Descriptive.</span>
-              </li>
-              <li>
-                <svg class="craft__check" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
-                <span><strong>FTS5 global search</strong> — fuzzy search across subjects, chapters, topics, tags and questions, with a <kbd class="mono">Ctrl+K</kbd> command bar.</span>
-              </li>
-              <li>
-                <svg class="craft__check" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
-                <span><strong>SM-2 spaced repetition</strong> — a daily review queue, fed by a Mistake Room built from your attempts.</span>
-              </li>
-              <li>
-                <svg class="craft__check" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
-                <span><strong>Mock-exam simulator</strong> — timed, section-based exams with negative marking, focus mode and per-attempt results.</span>
-              </li>
-              <li>
-                <svg class="craft__check" viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
-                <span><strong>Deep analytics</strong> — accuracy, time distribution, weak-topic detection and long-run performance trends.</span>
-              </li>
+            <ul class="product-card__points">
+              <li>Six question types, from MCQ and MSQ to rich-text descriptive.</li>
+              <li>Timed, section-based mock exams with negative marking.</li>
+              <li>SM-2 spaced repetition fed by your own mistakes.</li>
+              <li>Accuracy, timing and weak-topic analytics over the long run.</li>
             </ul>
-            <div class="craft__cta">
+            <div class="product-card__cta">
               <a class="btn btn--primary" href="/chemprep-releases/">
                 Explore ChemPrep
                 <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -334,105 +295,44 @@
                   <path d="M8 2h6v6" />
                 </svg>
               </a>
-              <span class="craft__fine mono">Proprietary · license-paid · releases via GitHub</span>
+              <span class="product-card__fine mono">Windows · Linux · proprietary</span>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section class="showcase section" id="product" aria-labelledby="showcase-title">
-        <div class="section__head reveal">
-          <span class="eyebrow">Showcase</span>
-          <h2 class="section__title" id="showcase-title">The product, on every surface.</h2>
-          <p class="section__lead">
-            Every ChemPrep surface ships in the same dark chrome — quiz, analytics,
-            taxonomy and first-run setup.
-          </p>
-        </div>
-        <div class="showcase__grid">
-          <figure class="shot reveal">
-            <div class="shot__bar">
-              <span class="shot__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="shot__label">Quiz</span>
+          <article class="product-card product-card--soon">
+            <div class="product-card__head">
+              <span class="product-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3v18h18" />
+                  <path d="m7 14 3-3 3 2 4-6" />
+                </svg>
+              </span>
+              <span class="product-card__title">
+                <span class="product-card__name">TraderPulse</span>
+                <span class="product-card__tag">Trading &amp; tax management</span>
+              </span>
+              <span class="product-card__status product-card__status--soon">In development</span>
             </div>
-            <img src="assets/QuizPage.png" alt="ChemPrep quiz session with timed questions and answer options" loading="lazy" width="1366" height="737" />
-          </figure>
-          <figure class="shot reveal">
-            <div class="shot__bar">
-              <span class="shot__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="shot__label">Analytics</span>
+            <p class="product-card__lead">
+              A local-first workspace for traders: a trade journal, portfolio
+              performance, and tax-ready books — built on the same offline-first
+              foundation as ChemPrep.
+            </p>
+            <ul class="product-card__points">
+              <li>A structured journal for trades and positions.</li>
+              <li>Portfolio performance and holding analysis.</li>
+              <li>Tax books and year-end preparation, computed locally.</li>
+            </ul>
+            <div class="product-card__cta">
+              <span class="product-card__fine mono">Private preview · not yet publicly available</span>
             </div>
-            <img src="assets/PerformanceTab.png" alt="ChemPrep performance tab with accuracy and trend analytics" loading="lazy" width="1366" height="737" />
-          </figure>
-          <figure class="shot reveal">
-            <div class="shot__bar">
-              <span class="shot__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="shot__label">Taxonomy</span>
-            </div>
-            <img src="assets/TaxonomyPage.png" alt="ChemPrep taxonomy page showing subjects, chapters and topics" loading="lazy" width="1366" height="737" />
-          </figure>
-          <figure class="shot reveal">
-            <div class="shot__bar">
-              <span class="shot__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="shot__label">Welcome</span>
-            </div>
-            <img src="assets/WelcomePage.png" alt="ChemPrep first-run welcome screen" loading="lazy" width="1366" height="737" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="download section" id="download" aria-labelledby="download-title">
-        <div class="section__head reveal">
-          <span class="eyebrow">Download</span>
-          <h2 class="section__title" id="download-title">Take ChemPrep home.</h2>
-          <p class="section__lead">
-            One-line installers from the public releases repository. Every build
-            ships from GitHub Releases — NSIS <span class="nowrap">.exe</span>,
-            AppImage, <span class="nowrap">.deb</span>. 64-bit only, no runtime. Data stays on your machine.
-          </p>
+          </article>
         </div>
 
-        <div class="download__cards reveal">
-          <div class="term">
-            <div class="term__bar">
-              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="term__label">Linux — install</span>
-            </div>
-            <pre class="term__code" tabindex="0"><code>curl -fsSL https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.sh | bash</code></pre>
-            <div class="term__actions">
-              <span class="term__meta mono">AppImage · deb</span>
-              <button class="copy-btn" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.sh | bash">Copy</button>
-            </div>
-          </div>
-
-          <div class="term">
-            <div class="term__bar">
-              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="term__label">Windows — PowerShell</span>
-            </div>
-            <pre class="term__code" tabindex="0"><code>irm https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.ps1 | iex</code></pre>
-            <div class="term__actions">
-              <span class="term__meta mono">NSIS installer</span>
-              <button class="copy-btn" type="button" data-copy="irm https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.ps1 | iex">Copy</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="download__cta reveal">
-          <div class="download__buttons">
-            <a class="btn btn--primary" href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">
-              Browse all releases
-              <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M1.5 8h11.5" />
-                <path d="M9 3.5 13.5 8 9 12.5" />
-              </svg>
-            </a>
-            <a class="btn btn--ghost" href="/chemprep-releases/">Visit the product page</a>
-          </div>
-          <p class="download__min">
-            Windows 11 · Windows 10 · Linux (AppImage · deb) — 64-bit · offline · no account
-          </p>
-        </div>
+        <p class="products__note reveal">
+          Internal back-office tooling runs the studio itself; it is never
+          distributed or sold.
+        </p>
       </section>
 
       <section class="faq section" id="faq" aria-labelledby="faq-title">
@@ -443,46 +343,45 @@
         <div class="faq__list reveal">
           <div class="faq__item">
             <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-build">
+                <span>What does IZMΛΛ Labs build?</span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-build">
+              <div class="faq__a-inner">
+                <p>Offline-first desktop software for high-stakes work. Today that
+                means ChemPrep for chemistry exam preparation and TraderPulse for
+                trading and tax management — with more focused tools to come.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
               <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-open-source">
-                <span>Is ChemPrep open source?</span>
+                <span>Are the products open source?</span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
             <div class="faq__a" id="faq-a-open-source">
               <div class="faq__a-inner">
-                <p>No. ChemPrep is proprietary, license-paid software. The studio and
-                product ship as a brand, and builds are released through the public
-                releases repository.</p>
+                <p>No. Our products are proprietary. Public repositories host
+                releases and product pages; the application source stays private.</p>
               </div>
             </div>
           </div>
           <div class="faq__item">
             <h3 class="faq__q">
               <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-offline">
-                <span>Does it need an internet connection?</span>
+                <span>Do the products need an internet connection?</span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
             <div class="faq__a" id="faq-a-offline">
               <div class="faq__a-inner">
-                <p>No. ChemPrep is fully offline and local-first. There's no account,
-                no cloud sync and no telemetry — your question bank and analytics
-                live entirely in a workspace folder you own.</p>
-              </div>
-            </div>
-          </div>
-          <div class="faq__item">
-            <h3 class="faq__q">
-              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-data">
-                <span>Where does my data live?</span>
-                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
-              </button>
-            </h3>
-            <div class="faq__a" id="faq-a-data">
-              <div class="faq__a-inner">
-                <p>In a user-owned workspace folder on your machine — portable USB
-                works fine. Backups, images, the database and app state all live
-                inside that folder, under your control.</p>
+                <p>No. Everything is local-first by design. There is no account, no
+                cloud sync and no telemetry — your data lives entirely in a
+                workspace folder you own.</p>
               </div>
             </div>
           </div>
@@ -495,9 +394,9 @@
             </h3>
             <div class="faq__a" id="faq-a-platforms">
               <div class="faq__a-inner">
-                <p>Native desktop builds for Windows (x64) and Linux (x64) — NSIS
-                <span class="nowrap">.exe</span>, AppImage and <span class="nowrap">.deb</span>
-                via GitHub Releases. No Electron runtime.</p>
+                <p>Native desktop builds for Windows (x64) and Linux (x64). No
+                Electron runtime — the products are built on a Rust core with a
+                React surface.</p>
               </div>
             </div>
           </div>
@@ -510,8 +409,8 @@
             <span class="eyebrow">Contact</span>
             <h2 class="band__title" id="contact-title">Talk to the studio.</h2>
             <p class="band__lead">
-              Questions about ChemPrep, a feature idea, or a plain hello — the
-              inbox is open, and it answers like a human.
+              Questions about ChemPrep or TraderPulse, a feature idea, or a plain
+              hello — the inbox is open, and it answers like a human.
             </p>
           </div>
           <div class="contact-band__links reveal">
@@ -575,18 +474,12 @@
               height="26"
             />
           </a>
-          <span class="site-footer__studio">flagship product</span>
-          <a class="site-footer__product" href="/chemprep-releases/">
-            <img src="assets/chemprep-logo-icon.png" alt="" width="22" height="22" />
-            <span>ChemPrep</span>
-          </a>
+          <span class="site-footer__studio">independent software studio</span>
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#craft">Craft</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -596,6 +489,7 @@
       <div class="site-footer__base">
         <div class="site-footer__base-links">
           <a href="https://github.com/izmaalabs">github.com/izmaalabs</a>
+          <a href="/chemprep-releases/">ChemPrep releases</a>
           <div class="socials socials--footer">
             <a class="socials__link" href="https://instagram.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMΛΛ Labs on Instagram">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -622,7 +516,7 @@
             </a>
           </div>
         </div>
-        <p class="site-credit">© 2026 IZMΛΛ Labs. ChemPrep is proprietary software. All rights reserved.</p>
+        <p class="site-credit">© 2026 IZMΛΛ Labs. All rights reserved.</p>
       </div>
     </footer>
   </body>
