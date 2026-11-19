@@ -1,4 +1,4 @@
-/* IZMΛΛ Labs — site behavior
+/* IZMAA Labs — site behavior
    Vanilla JS only: theme toggle, mobile menu, scrollspy, reveal, FAQ, copy. */
 
 (function () {
@@ -25,7 +25,7 @@
     }
   }
 
-  /* IZMΛΛ Labs wordmark — swap the theme-aware variant (dark-first default). */
+  /* IZMAA Labs wordmark — swap the theme-aware variant (dark-first default). */
   var WORDMARK_LIGHT = 'izmaalabs-wordmark.svg';
   var WORDMARK_DARK = 'izmaalabs-wordmark-dark.svg';
   function applyWordmark() {

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ChemPrep × IZMΛΛ Labs — GitHub Pages landing
+   ChemPrep × IZMAA Labs — GitHub Pages landing
    "Quantized Lab" — dark-first, Swiss grid, hairline borders, soft radials
    ========================================================================== */
 
@@ -245,6 +245,16 @@ html.js .reveal.is-visible {
 .site-logo__mark {
   width: 28px;
   height: 28px;
+}
+
+/* Official studio mark beside the wordmark (lockup). */
+.site-logo__glyph {
+  width: auto;
+  height: 34px;
+}
+
+.site-logo__glyph--footer {
+  height: 26px;
 }
 
 .site-logo__v {
