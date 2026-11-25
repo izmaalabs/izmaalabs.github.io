@@ -3,20 +3,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IZMAA Labs — Micro-SaaS studio for focused desktop software</title>
+    <title>IZMAA Labs — Micro-SaaS Studio</title>
     <meta
       name="description"
-      content="IZMAA Labs is a software studio building micro-SaaS products — focused desktop tools for high-stakes work: ChemPrep for chemistry exam preparation and TraderPulse for trading and tax management."
+      content="IZMAA Labs builds micro-SaaS desktop tools. ChemPrep by IZMAA Labs is available; TraderPulse by IZMAA Labs is UNDER DEVELOPMENT. No account, cloud or telemetry."
     />
     <meta name="theme-color" content="#121210" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://izmaalabs.github.io/" />
     <meta property="og:site_name" content="IZMAA Labs" />
-    <meta property="og:title" content="IZMAA Labs — Micro-SaaS studio for focused desktop software" />
+    <meta property="og:title" content="IZMAA Labs — Micro-SaaS Studio" />
     <meta
       property="og:description"
-      content="A software studio building micro-SaaS products: focused desktop software for high-stakes work. Flagship: ChemPrep for chemistry exam preparation. In development: TraderPulse for trading and tax. No cloud, no account, no telemetry."
+      content="Focused desktop tools for high-stakes work. ChemPrep by IZMAA Labs is available; TraderPulse by IZMAA Labs is UNDER DEVELOPMENT. No account, no cloud, no telemetry."
     />
+    <link rel="canonical" href="https://izmaalabs.github.io/" />
+    <meta property="og:image" content="https://izmaalabs.github.io/assets/DashboardPage.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@izmaalabs" />
+    <meta name="twitter:title" content="IZMAA Labs — Micro-SaaS Studio" />
+    <meta name="twitter:description" content="ChemPrep by IZMAA Labs is available; TraderPulse by IZMAA Labs is UNDER DEVELOPMENT. No account, no cloud, no telemetry." />
+    <meta name="twitter:image" content="https://izmaalabs.github.io/assets/DashboardPage.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://izmaalabs.github.io/#organization",
+            "name": "IZMAA Labs",
+            "url": "https://izmaalabs.github.io/",
+            "email": "izmaalabs@gmail.com",
+            "description": "A software studio building micro-SaaS products.",
+            "sameAs": ["https://github.com/izmaalabs"]
+          },
+          {
+            "@type": "WebSite",
+            "name": "IZMAA Labs",
+            "url": "https://izmaalabs.github.io/",
+            "publisher": { "@type": "Organization", "name": "IZMAA Labs", "url": "https://izmaalabs.github.io/" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does IZMAA Labs build?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A software studio building micro-SaaS products: focused desktop tools for high-stakes work. ChemPrep by IZMAA Labs is available for chemistry exam preparation. TraderPulse by IZMAA Labs is UNDER DEVELOPMENT as a planned trading and tax workspace."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the products open source?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The products are proprietary. Public repositories host releases and product pages; application source stays private."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do the products need an internet connection?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ChemPrep by IZMAA Labs runs locally with no account, no cloud and no telemetry. Your data lives entirely in a workspace folder you own."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the status of TraderPulse by IZMAA Labs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "UNDER DEVELOPMENT. It is not publicly available, and there is no download, price or published feature promise. It is planned as a local-first workspace for trading management and AET tax."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which platforms are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ChemPrep by IZMAA Labs has native desktop builds for Windows (x64) and Linux (x64). Installers are published on GitHub Releases."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="icon" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,12 +111,12 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="app.js"></script>
   </head>
-  <body>
+  <body class="instrument" data-accent="studio">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" id="site-header">
       <div class="site-header__inner">
-        <a class="site-logo" href="https://github.com/izmaalabs" aria-label="IZMAA Labs — GitHub organization">
+        <a class="site-logo" href="index.html" aria-label="IZMAA Labs home">
           <img
             class="site-logo__glyph"
             src="assets/izmaalabs-logo.png"
@@ -63,7 +137,7 @@
 
         <nav class="site-nav" aria-label="Primary">
           <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about" class="is-active">Studio</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -71,9 +145,7 @@
         </nav>
 
         <div class="site-header__actions">
-          <a class="header-pill" href="/chemprep-releases/">
-            ChemPrep<span class="header-pill__v" aria-hidden="true">v7.4</span>
-          </a>
+          <a class="inst-tag" href="chemprep/index.html">ChemPrep</a>
           <button
             id="theme-toggle"
             class="icon-button"
@@ -96,375 +168,305 @@
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__molecule" aria-hidden="true">
-          <svg viewBox="0 0 640 440" class="hero__svg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="mol-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#7f5171" />
-                <stop offset="100%" stop-color="#2a5e2c" />
-              </linearGradient>
-              <radialGradient id="mol-fade" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0%" stop-color="#9d6f92" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#9d6f92" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-            <circle class="hero__svg-fade" cx="350" cy="240" r="230" fill="url(#mol-fade)" />
-            <g class="hero__svg-rings" fill="none" stroke="url(#mol-grad)" stroke-width="1">
-              <circle cx="120" cy="118" r="42" opacity="0.85" />
-              <circle cx="120" cy="118" r="96" opacity="0.4" />
-              <ellipse cx="246" cy="72" rx="46" ry="30" opacity="0.7" />
-              <ellipse cx="84" cy="280" rx="52" ry="34" opacity="0.6" />
-              <circle cx="330" cy="330" r="54" opacity="0.75" />
-              <ellipse cx="512" cy="272" rx="80" ry="40" opacity="0.55" />
-              <ellipse cx="536" cy="120" rx="40" ry="24" opacity="0.75" />
-            </g>
-            <g class="hero__svg-bonds" stroke="url(#mol-grad)" stroke-width="1.5">
-              <line x1="120" y1="22" x2="120" y2="72" opacity="0.45" />
-              <line x1="24" y1="118" x2="74" y2="118" opacity="0.45" />
-              <line x1="166" y1="118" x2="200" y2="136" opacity="0.35" />
-              <line x1="136" y1="140" x2="120" y2="280" opacity="0.35" />
-              <line x1="330" y1="276" x2="330" y2="330" opacity="0.4" />
-              <line x1="276" y1="330" x2="330" y2="330" opacity="0.35" />
-            </g>
-            <g fill="url(#mol-grad)" class="hero__svg-nodes">
-              <circle cx="120" cy="118" r="4" />
-              <circle cx="120" cy="22" r="2.6" opacity="0.85" />
-              <circle cx="120" cy="214" r="2.6" opacity="0.85" />
-              <circle cx="24" cy="118" r="2.6" opacity="0.85" />
-              <circle cx="120" cy="72" r="2.4" opacity="0.6" />
-              <circle cx="84" cy="280" r="3" opacity="0.8" />
-              <circle cx="330" cy="330" r="3.4" />
-              <circle cx="330" cy="276" r="2.4" opacity="0.7" />
-              <circle cx="276" cy="330" r="2.4" opacity="0.7" />
-              <circle cx="384" cy="330" r="4" opacity="0.8" />
-              <circle cx="432" cy="272" r="3" opacity="0.75" />
-              <circle cx="592" cy="272" r="3" opacity="0.75" />
-            </g>
-          </svg>
-        </div>
-
-        <div class="hero__inner">
-          <div class="hero__copy reveal">
-            <span class="hero__badge">
-              <span class="hero__dot" aria-hidden="true"></span>
-              IZMAA Labs — micro-SaaS studio
-            </span>
-            <h1 class="hero__title" id="hero-title">
-              Small studio.<br />
-              <span class="gradient-text">Sharp desktop software for high-stakes work.</span>
+      <section class="inst-hero" aria-labelledby="hero-title">
+        <div class="inst-container inst-hero__grid">
+          <div class="inst-hero__copy reveal">
+            <p class="inst-hero__index">01 / Studio — IZMAA Labs</p>
+            <h1 id="hero-title">
+              A software studio <span>building micro-SaaS products.</span>
             </h1>
-            <p class="hero__lead">
-              We build precise desktop tools for high-stakes work. ChemPrep
-              brings exam-grade chemistry preparation into one Rust-native binary;
-              TraderPulse is our trading and tax workspace, in development. Same
-              standard across both: fast, quiet, and entirely on your machine.
+            <p class="inst-lead">
+              Focused desktop tools for high-stakes work.
+              <strong>ChemPrep by IZMAA Labs</strong> is available for chemistry
+              exam preparation; <strong>TraderPulse by IZMAA Labs</strong> is
+              UNDER DEVELOPMENT as a planned trading and tax workspace. Data lives
+              in a workspace folder you own — no account, no cloud, no telemetry.
             </p>
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#products">
-                Explore our products
-                <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M6 10 14 2" />
-                  <path d="M8 2h6v6" />
+            <div class="inst-actions">
+              <a class="inst-btn inst-btn--primary" href="#products">
+                Explore products
+                <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1.5 6h8" />
+                  <path d="M6.5 3 9.5 6 6.5 9" />
                 </svg>
               </a>
-              <a class="btn btn--ghost" href="#about">Meet the studio</a>
+              <a class="inst-btn" href="#about">How we build</a>
             </div>
-            <ul class="hero__platform">
-              <li>Windows · Linux</li>
-              <li>offline · no account · no cloud</li>
-            </ul>
           </div>
 
-          <figure class="app-frame-wrap reveal">
-            <div class="app-frame">
-              <div class="app-frame__bar">
-                <span class="app-frame__dots" aria-hidden="true">
-                  <i></i><i></i><i></i>
-                </span>
-                <span class="app-frame__title">ChemPrep — flagship workspace</span>
-                <span class="app-frame__ref">v7.4 · offline</span>
-              </div>
+          <figure class="inst-specimen reveal">
+            <div class="inst-specimen__bar">
+              <span>Fig. 01 — ChemPrep by IZMAA Labs workspace</span>
+              <span>DESKTOP / LOCAL</span>
+            </div>
+            <div class="inst-specimen__media">
               <img
-                class="app-frame__shot"
                 src="assets/DashboardPage.png"
-                alt="ChemPrep dashboard showing a question bank, analytics and review widgets"
+                alt="ChemPrep by IZMAA Labs dashboard showing a question bank, analytics and review tools"
                 width="1366"
                 height="737"
               />
             </div>
-            <figcaption class="visually-hidden">
-              ChemPrep dashboard — question bank, analytics and spaced-repetition review in one local-first workspace.
+            <figcaption>
+              A specimen of the studio's desktop software: exam preparation kept
+              in one local workspace.
             </figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="metrics" aria-label="The studio at a glance">
-        <div class="metrics__inner">
-          <div class="metric reveal">
-            <span class="metric__value">100%</span>
-            <span class="metric__label">local by default<br />every product runs fully on your machine</span>
+      <section class="inst-specs" aria-label="Operating notes">
+        <div class="inst-container inst-specs__grid">
+          <div class="inst-spec reveal">
+            <span class="inst-spec__id">01</span>
+            <span class="inst-spec__label">Local-first</span>
           </div>
-          <div class="metric reveal">
-            <span class="metric__value">0</span>
-            <span class="metric__label">accounts<br />install, open a workspace, begin</span>
+          <div class="inst-spec reveal">
+            <span class="inst-spec__id">02</span>
+            <span class="inst-spec__label">No account</span>
           </div>
-          <div class="metric reveal">
-            <span class="metric__value">0</span>
-            <span class="metric__label">telemetry<br />nothing reports back — ever</span>
+          <div class="inst-spec reveal">
+            <span class="inst-spec__id">03</span>
+            <span class="inst-spec__label">No cloud</span>
           </div>
-          <div class="metric reveal">
-            <span class="metric__value">Rust</span>
-            <span class="metric__label">native core<br />fast, small, memory-safe desktop builds</span>
+          <div class="inst-spec reveal">
+            <span class="inst-spec__id">04</span>
+            <span class="inst-spec__label">No telemetry</span>
           </div>
         </div>
       </section>
 
-      <section class="band" id="about" aria-labelledby="about-title">
-        <div class="band__inner">
-          <div class="band__copy reveal">
-            <span class="eyebrow">The studio</span>
-            <h2 class="band__title" id="about-title">
-              Local by default.<br />
-              <span class="gradient-text">Precise by design.</span>
-            </h2>
-            <p class="band__lead">
-              IZMAA Labs is a software studio building micro-SaaS
-              products: focused desktop tools for high-stakes work — the kind
-              where focus, privacy and speed matter more than flash.
-              Every product is local-first: your data lives in a
-              folder you own, not on someone else's server. No cloud, no telemetry,
-              no data to sell.
+      <section class="inst-section" id="about" aria-labelledby="about-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">02 / How we build</span></div>
+          <div>
+            <h2 class="inst-section__title" id="about-title">Quiet software, built to be owned.</h2>
+            <p class="inst-section__note">
+              IZMAA Labs is a software studio building micro-SaaS products. Each
+              tool does one job, keeps its data in a workspace folder, and stays
+              out of the way while it works.
+            </p>
+            <p class="inst-editorial">
+              The machine is the boundary. What you make stays on it.
             </p>
           </div>
-          <ul class="band__grid reveal">
-            <li class="band__item">
-              <span class="band__item-title">Local-first</span>
-              <span class="band__item-text">Every workspace is a folder you own.</span>
-            </li>
-            <li class="band__item">
-              <span class="band__item-title">No account</span>
-              <span class="band__item-text">Install, open, begin. Nothing to sign up for.</span>
-            </li>
-            <li class="band__item">
-              <span class="band__item-title">No telemetry</span>
-              <span class="band__item-text">Nothing reports back. No analytics SDK.</span>
-            </li>
-            <li class="band__item">
-              <span class="band__item-title">Built for focus</span>
-              <span class="band__item-text">Quiet software that stays out of the way.</span>
-            </li>
-          </ul>
         </div>
-      </section>
-
-      <section class="section" id="products" aria-labelledby="products-title">
-        <div class="section__head reveal">
-          <span class="eyebrow">Products</span>
-          <h2 class="section__title" id="products-title">Two products. One philosophy.</h2>
-          <p class="section__lead">
-            Different domains, same standards: native performance, quiet
-            interfaces, and complete ownership of your data.
-          </p>
-        </div>
-
-        <div class="products__grid reveal">
-          <article class="product-card">
-            <div class="product-card__head">
-              <span class="product-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 3h6" />
-                  <path d="M10 3v6l-5 8.5A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.5L14 9V3" />
-                  <path d="M7.5 15h9" />
-                </svg>
-              </span>
-              <span class="product-card__title">
-                <span class="product-card__name">ChemPrep</span>
-                <span class="product-card__tag">Chemistry exam preparation</span>
-              </span>
-              <span class="product-card__status">Available now</span>
+        <div class="inst-container inst-principles reveal">
+          <div class="inst-principle">
+            <span class="inst-principle__id">01</span>
+            <div>
+              <span class="inst-principle__title">Local-first</span>
+              <p class="inst-principle__text">
+                Work runs fully offline. Data lives in one workspace folder you
+                own, not on a server we host.
+              </p>
             </div>
-            <p class="product-card__lead">
-              A complete preparation workspace for high-stakes chemistry exams: a
-              question bank, a mock-exam simulator, deep analytics and
-              spaced-repetition review — in one binary, entirely on your machine.
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">02</span>
+            <div>
+              <span class="inst-principle__title">No account</span>
+              <p class="inst-principle__text">
+                Open a workspace and begin. There is nothing to sign up for and
+                no identity to manage.
+              </p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">03</span>
+            <div>
+              <span class="inst-principle__title">No cloud</span>
+              <p class="inst-principle__text">
+                No remote origin, no sync service and no hosted copy of your
+                work. The folder is the record.
+              </p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">04</span>
+            <div>
+              <span class="inst-principle__title">No telemetry</span>
+              <p class="inst-principle__text">
+                Nothing reports back. There is no analytics SDK and no usage
+                stream leaving the machine.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="products" aria-labelledby="products-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">03 / Products</span></div>
+          <div>
+            <h2 class="inst-section__title" id="products-title">Two products. One standard.</h2>
+            <p class="inst-section__note">
+              ChemPrep by IZMAA Labs is available. TraderPulse by IZMAA Labs is
+              UNDER DEVELOPMENT. Internal back-office tooling runs the studio and
+              is never distributed.
             </p>
-            <ul class="product-card__points">
-              <li>Six question types, from MCQ and MSQ to rich-text descriptive.</li>
-              <li>Timed, section-based mock exams with negative marking.</li>
-              <li>SM-2 spaced repetition fed by your own mistakes.</li>
-              <li>Accuracy, timing and weak-topic analytics over the long run.</li>
-            </ul>
-            <div class="product-card__cta">
-              <a class="btn btn--primary" href="/chemprep-releases/">
-                Explore ChemPrep
-                <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M6 10 14 2" />
-                  <path d="M8 2h6v6" />
+          </div>
+        </div>
+
+        <div class="inst-container inst-products reveal">
+          <article class="inst-product inst-product--chemprep">
+            <div class="inst-product__top">
+              <div>
+                <div class="inst-product__marker" aria-hidden="true"></div>
+                <h3 class="inst-product__name">ChemPrep by IZMAA Labs</h3>
+                <p class="inst-product__tag">Chemistry exam preparation</p>
+              </div>
+              <span class="inst-product__status">Available</span>
+            </div>
+            <p class="inst-product__copy">
+              A local-first desktop workspace for chemistry exam prep: question
+              bank, timed mocks, analytics and spaced-repetition review. Native
+              builds for Windows and Linux; downloads are served from GitHub
+              Releases.
+            </p>
+            <div class="inst-product__meta">
+              <a class="inst-btn inst-btn--primary" href="chemprep/index.html">
+                Open ChemPrep by IZMAA Labs
+                <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1.5 6h8" />
+                  <path d="M6.5 3 9.5 6 6.5 9" />
                 </svg>
               </a>
-              <span class="product-card__fine mono">Windows · Linux · proprietary</span>
+              <a class="inst-text-link" href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">GitHub Releases</a>
+              <span class="inst-product__fine">Windows · Linux · proprietary</span>
             </div>
           </article>
 
-          <article class="product-card product-card--soon">
-            <div class="product-card__head">
-              <span class="product-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 3v18h18" />
-                  <path d="m7 14 3-3 3 2 4-6" />
-                </svg>
-              </span>
-              <span class="product-card__title">
-                <span class="product-card__name">TraderPulse</span>
-                <span class="product-card__tag">Trading &amp; tax management</span>
-              </span>
-              <span class="product-card__status product-card__status--soon">In development</span>
+          <article class="inst-product inst-product--traderpulse">
+            <div class="inst-product__top">
+              <div>
+                <div class="inst-product__marker" aria-hidden="true"></div>
+                <h3 class="inst-product__name">TraderPulse by IZMAA Labs</h3>
+                <p class="inst-product__tag">Planned trading &amp; tax workspace</p>
+              </div>
+              <span class="inst-product__status">UNDER DEVELOPMENT</span>
             </div>
-            <p class="product-card__lead">
-              A local-first workspace for traders: a trade journal, portfolio
-              performance, and tax-ready books — built on the same offline-first
-              foundation as ChemPrep.
+            <p class="inst-product__copy">
+              A planned local-first workspace for trading management and AET tax.
+              Not publicly available yet: no download, no price and no published
+              feature promise.
             </p>
-            <ul class="product-card__points">
-              <li>A structured journal for trades and positions.</li>
-              <li>Portfolio performance and holding analysis.</li>
-              <li>Tax books and year-end preparation, computed locally.</li>
-            </ul>
-            <div class="product-card__cta">
-              <span class="product-card__fine mono">Private preview · not yet publicly available</span>
+            <div class="inst-product__meta">
+              <a class="inst-btn" href="traderpulse/index.html">
+                Read the status
+                <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1.5 6h8" />
+                  <path d="M6.5 3 9.5 6 6.5 9" />
+                </svg>
+              </a>
+              <span class="inst-product__fine">No download · no pricing</span>
             </div>
           </article>
         </div>
-
-        <p class="products__note reveal">
-          Internal back-office tooling runs the studio itself; it is never
-          distributed or sold.
-        </p>
       </section>
 
-      <section class="faq section" id="faq" aria-labelledby="faq-title">
-        <div class="section__head reveal">
-          <span class="eyebrow">FAQ</span>
-          <h2 class="section__title" id="faq-title">Questions, answered.</h2>
+      <section class="inst-section" id="faq" aria-labelledby="faq-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">04 / FAQ</span></div>
+          <div><h2 class="inst-section__title" id="faq-title">Questions, answered.</h2></div>
         </div>
-        <div class="faq__list reveal">
+        <div class="inst-container faq__list reveal">
           <div class="faq__item">
             <h3 class="faq__q">
               <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-build">
-                <span>What does IZMAA Labs build?</span>
+                <span class="inst-faq__q"><span class="inst-faq__id">01</span><span>What does IZMAA Labs build?</span></span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
             <div class="faq__a" id="faq-a-build">
               <div class="faq__a-inner">
-                <p>Focused micro-SaaS tools for high-stakes work: desktop software
-                that does one job well. Today that means ChemPrep
-                for chemistry exam preparation and TraderPulse for trading and tax
-                management — with more focused tools to come.</p>
+                <p>A software studio building micro-SaaS products: focused desktop tools for high-stakes work. ChemPrep by IZMAA Labs is available for chemistry exam preparation. TraderPulse by IZMAA Labs is UNDER DEVELOPMENT as a planned trading and tax workspace.</p>
               </div>
             </div>
           </div>
           <div class="faq__item">
             <h3 class="faq__q">
-              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-open-source">
-                <span>Are the products open source?</span>
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-source">
+                <span class="inst-faq__q"><span class="inst-faq__id">02</span><span>Are the products open source?</span></span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
-            <div class="faq__a" id="faq-a-open-source">
+            <div class="faq__a" id="faq-a-source">
               <div class="faq__a-inner">
-                <p>No. Our products are proprietary. Public repositories host
-                releases and product pages; the application source stays private.</p>
+                <p>No. The products are proprietary. Public repositories host releases and product pages; application source stays private.</p>
               </div>
             </div>
           </div>
           <div class="faq__item">
             <h3 class="faq__q">
               <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-offline">
-                <span>Do the products need an internet connection?</span>
+                <span class="inst-faq__q"><span class="inst-faq__id">03</span><span>Do the products need an internet connection?</span></span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
             <div class="faq__a" id="faq-a-offline">
               <div class="faq__a-inner">
-                <p>No. Everything is local-first by design. There is no account, no
-                cloud sync and no telemetry — your data lives entirely in a
-                workspace folder you own.</p>
+                <p>ChemPrep by IZMAA Labs runs locally with no account, no cloud and no telemetry. Your data lives entirely in a workspace folder you own.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-traderpulse">
+                <span class="inst-faq__q"><span class="inst-faq__id">04</span><span>What is the status of TraderPulse by IZMAA Labs?</span></span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-traderpulse">
+              <div class="faq__a-inner">
+                <p>UNDER DEVELOPMENT. It is not publicly available, and there is no download, price or published feature promise. It is planned as a local-first workspace for trading management and AET tax.</p>
               </div>
             </div>
           </div>
           <div class="faq__item">
             <h3 class="faq__q">
               <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-platforms">
-                <span>Which platforms are supported?</span>
+                <span class="inst-faq__q"><span class="inst-faq__id">05</span><span>Which platforms are supported?</span></span>
                 <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
               </button>
             </h3>
             <div class="faq__a" id="faq-a-platforms">
               <div class="faq__a-inner">
-                <p>Native desktop builds for Windows (x64) and Linux (x64). No
-                Electron runtime — the products are built on a Rust core with a
-                React surface.</p>
+                <p>ChemPrep by IZMAA Labs has native desktop builds for Windows (x64) and Linux (x64). Installers are published on GitHub Releases.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="band contact-band" id="contact" aria-labelledby="contact-title">
-        <div class="band__inner">
-          <div class="band__copy reveal">
-            <span class="eyebrow">Contact</span>
-            <h2 class="band__title" id="contact-title">Talk to the studio.</h2>
-            <p class="band__lead">
-              Questions about ChemPrep or TraderPulse, a feature idea, or a plain
-              hello — the inbox is open, and it answers like a human.
+      <section class="inst-section inst-contact" id="contact" aria-labelledby="contact-title">
+        <div class="inst-container inst-contact__grid">
+          <div class="reveal">
+            <span class="inst-section__label">05 / Contact</span>
+            <h2 class="inst-section__title inst-contact__title" id="contact-title">Talk to the studio.</h2>
+            <p class="inst-section__note">
+              Questions about ChemPrep by IZMAA Labs, a feature idea, or a plain
+              hello — write to the studio inbox. Release news and code live on
+              GitHub.
             </p>
           </div>
-          <div class="contact-band__links reveal">
-            <a class="btn btn--ghost contact-band__btn" href="mailto:izmaalabs@gmail.com">
-              <svg class="btn__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
-              </svg>
-              <span class="mono">izmaalabs@gmail.com</span>
-            </a>
-            <a class="btn btn--ghost contact-band__btn" href="https://github.com/izmaalabs" target="_blank" rel="noopener">
-              <svg class="btn__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-              github.com/izmaalabs
-            </a>
-          </div>
-          <div class="contact-band__social reveal">
-            <span class="contact-band__social-label mono">Follow the studio</span>
-            <div class="socials">
-              <a class="socials__link" href="https://instagram.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on Instagram">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M17.2 6.8h.01" />
-                </svg>
+          <div class="reveal">
+            <div class="inst-contact__links">
+              <a class="inst-contact__link" href="mailto:izmaalabs@gmail.com">
+                <span>Email</span><span>izmaalabs@gmail.com</span>
               </a>
-              <a class="socials__link" href="https://facebook.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on Facebook">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.5V21h3z" />
-                </svg>
+              <a class="inst-contact__link" href="https://github.com/izmaalabs" target="_blank" rel="noopener">
+                <span>GitHub</span><span>github.com/izmaalabs</span>
               </a>
-              <a class="socials__link" href="https://x.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on X (Twitter)">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path d="M18.2 3h3l-6.6 7.6L22.5 21h-6.1l-4.8-6.3L6.2 21H3.2l7.1-8.1L2 3h6.3l4.3 5.7L18.2 3zm-1.1 16.2h1.7L7.9 4.7H6.1l11 14.5z" />
-                </svg>
-              </a>
-              <a class="socials__link" href="https://youtube.com/@izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on YouTube">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8 1.5.5 7.8.5 7.8.5s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.7.4-4.7z" />
-                  <path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" stroke="none" />
-                </svg>
-              </a>
+            </div>
+            <p class="inst-channels-head">Channels / @izmaalabs</p>
+            <div class="inst-channels">
+              <a class="inst-channel" href="https://github.com/izmaalabs" target="_blank" rel="noopener"><span>GitHub</span><span>izmaalabs</span></a>
+              <a class="inst-channel" href="https://www.facebook.com/izmaalabs" target="_blank" rel="noopener"><span>Facebook</span><span>@izmaalabs</span></a>
+              <a class="inst-channel" href="https://www.linkedin.com/company/izmaalabs/" target="_blank" rel="noopener"><span>LinkedIn</span><span>izmaalabs</span></a>
+              <a class="inst-channel" href="https://x.com/izmaalabs" target="_blank" rel="noopener"><span>X</span><span>@izmaalabs</span></a>
+              <a class="inst-channel" href="https://www.instagram.com/izmaalabs/" target="_blank" rel="noopener"><span>Instagram</span><span>@izmaalabs</span></a>
+              <a class="inst-channel" href="https://www.youtube.com/@izmaalabs" target="_blank" rel="noopener"><span>YouTube</span><span>@izmaalabs</span></a>
             </div>
           </div>
         </div>
@@ -474,7 +476,7 @@
     <footer class="site-footer">
       <div class="site-footer__inner">
         <div class="site-footer__brand">
-          <a class="site-logo" href="https://github.com/izmaalabs" aria-label="IZMAA Labs — GitHub organization">
+          <a class="site-logo" href="index.html" aria-label="IZMAA Labs home">
             <img
               class="site-logo__glyph site-logo__glyph--footer"
               src="assets/izmaalabs-logo.png"
@@ -492,11 +494,11 @@
               height="26"
             />
           </a>
-          <span class="site-footer__studio">micro-SaaS studio</span>
+          <span class="site-footer__studio">A software studio building micro-SaaS products.</span>
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Studio</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -505,34 +507,18 @@
         <a class="site-footer__mail" href="mailto:izmaalabs@gmail.com">izmaalabs@gmail.com</a>
       </div>
       <div class="site-footer__base">
-        <div class="site-footer__base-links">
-          <a href="https://github.com/izmaalabs">github.com/izmaalabs</a>
-          <a href="/chemprep-releases/">ChemPrep releases</a>
-          <div class="socials socials--footer">
-            <a class="socials__link" href="https://instagram.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on Instagram">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <path d="M17.2 6.8h.01" />
-              </svg>
-            </a>
-            <a class="socials__link" href="https://facebook.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on Facebook">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.5V21h3z" />
-              </svg>
-            </a>
-            <a class="socials__link" href="https://x.com/izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on X (Twitter)">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M18.2 3h3l-6.6 7.6L22.5 21h-6.1l-4.8-6.3L6.2 21H3.2l7.1-8.1L2 3h6.3l4.3 5.7L18.2 3zm-1.1 16.2h1.7L7.9 4.7H6.1l11 14.5z" />
-              </svg>
-            </a>
-            <a class="socials__link" href="https://youtube.com/@izmaalabs" target="_blank" rel="noopener" aria-label="IZMAA Labs on YouTube">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.9.9 1.6 1.8 1.8 1.5.5 7.8.5 7.8.5s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.7.4-4.7z" />
-                <path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" stroke="none" />
-              </svg>
-            </a>
-          </div>
+        <div class="inst-footer-links">
+          <a href="https://github.com/izmaalabs" target="_blank" rel="noopener">github.com/izmaalabs</a>
+          <a href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">ChemPrep by IZMAA Labs releases</a>
+          <a href="terms-of-service/index.html">Terms of Service</a>
+          <a href="privacy-policy/index.html">Privacy Policy</a>
+          <a href="refund-cancellation-policy/index.html">Refund &amp; Cancellation Policy</a>
+          <a href="pricing-contact/index.html">Pricing &amp; Contact Us</a>
+          <a href="https://www.facebook.com/izmaalabs" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/company/izmaalabs/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/izmaalabs" target="_blank" rel="noopener">X</a>
+          <a href="https://www.instagram.com/izmaalabs/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@izmaalabs" target="_blank" rel="noopener">YouTube</a>
         </div>
         <p class="site-credit">© 2026 IZMAA Labs. All rights reserved.</p>
       </div>

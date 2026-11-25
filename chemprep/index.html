@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChemPrep by IZMAA Labs — Offline Desktop CBT for CSIR-NET, GATE, IIT-JAM, CUET-PG &amp; PGT Chemistry</title>
+    <meta
+      name="description"
+      content="ChemPrep by IZMAA Labs is an offline desktop CBT and analytics workspace for CSIR-NET, GATE, IIT-JAM, CUET-PG and PGT Chemistry exam preparation."
+    />
+    <meta name="theme-color" content="#121210" />
+    <link rel="canonical" href="https://izmaalabs.github.io/chemprep/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://izmaalabs.github.io/chemprep/" />
+    <meta property="og:site_name" content="IZMAA Labs" />
+    <meta property="og:title" content="ChemPrep by IZMAA Labs — Offline Desktop CBT for CSIR-NET, GATE, IIT-JAM, CUET-PG &amp; PGT Chemistry" />
+    <meta property="og:description" content="An offline-first desktop CBT and analytics workspace for serious Chemistry exam preparation. No account, no cloud, no telemetry." />
+    <meta property="og:image" content="https://izmaalabs.github.io/assets/DashboardPage.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@izmaalabs" />
+    <meta name="twitter:title" content="ChemPrep by IZMAA Labs — Offline Desktop CBT for CSIR-NET, GATE, IIT-JAM, CUET-PG &amp; PGT Chemistry" />
+    <meta name="twitter:description" content="An offline-first desktop CBT and analytics workspace for serious Chemistry exam preparation. No account, no cloud, no telemetry." />
+    <meta name="twitter:image" content="https://izmaalabs.github.io/assets/DashboardPage.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://izmaalabs.github.io/#organization",
+            "name": "IZMAA Labs",
+            "url": "https://izmaalabs.github.io/",
+            "email": "izmaalabs@gmail.com",
+            "description": "A software studio building micro-SaaS products.",
+            "sameAs": ["https://github.com/izmaalabs"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "ChemPrep by IZMAA Labs",
+            "applicationCategory": "EducationApplication",
+            "operatingSystem": "Windows, Linux",
+            "description": "An offline-first desktop CBT and analytics workspace for serious Chemistry exam preparation.",
+            "url": "https://izmaalabs.github.io/chemprep/",
+            "downloadUrl": "https://github.com/izmaalabs/chemprep-releases",
+            "publisher": { "@type": "Organization", "name": "IZMAA Labs", "url": "https://izmaalabs.github.io/" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does ChemPrep by IZMAA Labs include video courses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. That is intentional. ChemPrep by IZMAA Labs is a practice and analytics workspace, not a video course platform. It is built as a companion to coaching, not a replacement."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it need an internet connection?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Practice is offline-first: no account, no cloud, no telemetry and no tracking SDKs. Installers are published on GitHub Releases; the app does not need a connection for practice."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will it run on my laptop?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ChemPrep by IZMAA Labs is a native desktop app, not a browser tab. Builds for Windows and Linux are 64-bit; see GitHub Releases for available installers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is there a free trial?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This site does not collect payment and no prices are published yet. See GitHub Releases for available builds; this page does not promise a free tier."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('cp-theme');
+          if (stored === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../app.js"></script>
+  </head>
+  <body class="instrument" data-accent="chemprep">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html" aria-label="IZMAA Labs home">
+          <img class="site-logo__glyph" src="../assets/izmaalabs-logo.png" alt="" aria-hidden="true" width="46" height="34" />
+          <img class="site-logo__mark site-logo__mark--word" src="../assets/izmaalabs-wordmark-dark.svg" data-wordmark="true" alt="IZMAA Labs" width="130" height="43" />
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="../index.html">Studio</a></li>
+            <li><a href="#pillars">What it does</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#b2b">For institutes</a></li>
+            <li><a href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">Releases</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="inst-tag" href="../chemprep/index.html">ChemPrep</a>
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle color theme"></button>
+          <button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" hidden></div>
+    </header>
+
+    <main id="main">
+      <section class="inst-hero" aria-labelledby="hero-title">
+        <div class="inst-container inst-hero__grid">
+          <div class="inst-hero__copy reveal">
+            <p class="inst-hero__index">ChemPrep by IZMAA Labs — CSIR-NET · GATE · IIT-JAM · CUET-PG · PGT Chemistry</p>
+            <h1 id="hero-title">
+              Stop Solving Mute PYQ PDFs.
+              <span>Start Tracking Every Mark You Lose.</span>
+            </h1>
+            <p class="inst-lead">
+              ChemPrep by IZMAA Labs is an offline-first desktop CBT and
+              analytics workspace for serious Chemistry exam preparation. Keep
+              your coaching, focus on converting theory into marks. No bloated
+              video courses, no browser tab to work around.
+            </p>
+            <div class="inst-actions">
+              <a class="inst-btn inst-btn--primary" href="../chemprep/index.html#download">
+                Get ChemPrep by IZMAA Labs
+                <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1.5 6h8" />
+                  <path d="M6.5 3 9.5 6 6.5 9" />
+                </svg>
+              </a>
+              <a class="inst-btn" href="../pricing-contact/index.html#b2b">
+                Chemistry coaching institute? Talk to us about B2B →
+              </a>
+            </div>
+            <p class="inst-hero__fine">Windows and Linux builds · no account · works offline</p>
+          </div>
+
+          <figure class="inst-specimen reveal">
+            <div class="inst-specimen__bar">
+              <span>Fig. 01 — ChemPrep by IZMAA Labs workspace</span>
+              <span>DESKTOP / LOCAL</span>
+            </div>
+            <div class="inst-specimen__media">
+              <img
+                src="../assets/DashboardPage.png"
+                alt="ChemPrep by IZMAA Labs dashboard with a question bank, analytics and review tools"
+                width="1366"
+                height="737"
+              />
+            </div>
+            <figcaption>
+              A specimen of the desktop workspace: question bank, analytics and
+              review in one local app.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="inst-section inst-section--flush" aria-labelledby="strip-title">
+        <div class="inst-container">
+          <div class="inst-section__head">
+            <div><span class="inst-section__label">02 / The workspace</span></div>
+            <div>
+              <h2 class="inst-section__title" id="strip-title">Three views, one workspace.</h2>
+              <p class="inst-section__note">
+                Existing product screens, shown as specimens. These are images
+                of the software, not invented dashboards.
+              </p>
+            </div>
+          </div>
+          <div class="inst-strip reveal">
+            <figure class="inst-strip__item">
+              <img src="../assets/QuizPage.png" alt="ChemPrep by IZMAA Labs quiz screen with custom quiz controls" width="1366" height="737" />
+              <figcaption><span class="inst-strip__id">01 /</span> Quiz builder — filters for exam, year, subject, chapter, topic, type and difficulty</figcaption>
+            </figure>
+            <figure class="inst-strip__item">
+              <img src="../assets/DashboardPage.png" alt="ChemPrep by IZMAA Labs dashboard with question bank and review surface" width="1366" height="737" />
+              <figcaption><span class="inst-strip__id">02 /</span> Workspace — question bank and review in one local desktop app</figcaption>
+            </figure>
+            <figure class="inst-strip__item">
+              <img src="../assets/PerformanceTab.png" alt="ChemPrep by IZMAA Labs performance view showing accuracy and timing analytics" width="1366" height="737" />
+              <figcaption><span class="inst-strip__id">03 /</span> Performance — accuracy, timing and trends reviewed locally</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="problem" aria-labelledby="problem-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">03 / The problem</span></div>
+          <div>
+            <h2 class="inst-section__title" id="problem-title">Guesswork quietly costs marks.</h2>
+            <p class="inst-section__note">
+              Most preparation tracks how much you studied. Fewer tools show
+              exactly where a mark was lost and why.
+            </p>
+          </div>
+        </div>
+        <div class="inst-container inst-rows reveal">
+          <div class="inst-row">
+            <span class="inst-row__id">01</span>
+            <span class="inst-row__title">Blind paper practice</span>
+            <p class="inst-row__text">Solving paper after paper without question-level feedback leaves the same gaps untouched.</p>
+          </div>
+          <div class="inst-row">
+            <span class="inst-row__id">02</span>
+            <span class="inst-row__title">Small screens</span>
+            <p class="inst-row__text">Short sessions on a smaller screen are useful, but the exam is a desktop; rehearse in the same form.</p>
+          </div>
+          <div class="inst-row">
+            <span class="inst-row__id">03</span>
+            <span class="inst-row__title">Shallow scorecards</span>
+            <p class="inst-row__text">A total score alone does not show which concepts, question types or timing patterns cost marks.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="pillars" aria-labelledby="pillars-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">04 / Five pillars</span></div>
+          <div>
+            <h2 class="inst-section__title" id="pillars-title">Desktop rigour, measured locally.</h2>
+            <p class="inst-section__note">
+              ChemPrep by IZMAA Labs is a companion to coaching, not a
+              replacement for it. These are the parts the product is built
+              around.
+            </p>
+          </div>
+        </div>
+        <div class="inst-container inst-principles reveal">
+          <div class="inst-principle">
+            <span class="inst-principle__id">01</span>
+            <div>
+              <span class="inst-principle__title">Desktop CBT arena</span>
+              <p class="inst-principle__text">Timed, section-based mocks with negative marking, focus mode and per-attempt results. Question palette, mark-for-review and keyboard navigation are supported. No browser tab.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">02</span>
+            <div>
+              <span class="inst-principle__title">Custom quizzes and precise filters</span>
+              <p class="inst-principle__text">Filter by exam name, exam year, subject, chapter, topic, question type and difficulty tag, with timer and shuffle controls.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">03</span>
+            <div>
+              <span class="inst-principle__title">Weak-area analytics</span>
+              <p class="inst-principle__text">Accuracy, timing and trends at question level, kept in your workspace rather than a remote dashboard.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">04</span>
+            <div>
+              <span class="inst-principle__title">Spaced-repetition review queue</span>
+              <p class="inst-principle__text">An SRS review queue brings back what you need to revisit, driven by your own attempts.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">05</span>
+            <div>
+              <span class="inst-principle__title">Coaching-agnostic companion</span>
+              <p class="inst-principle__text">Built to sit alongside your coaching. ChemPrep by IZMAA Labs is practice and measurement, not a video course platform.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="question-types" aria-labelledby="types-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">05 / The bank</span></div>
+          <div>
+            <h2 class="inst-section__title" id="types-title">Six question types, one bank.</h2>
+            <p class="inst-section__note">
+              ChemPrep by IZMAA Labs keeps objective and descriptive questions
+              together, so practice can match the paper in front of you.
+            </p>
+          </div>
+        </div>
+        <div class="inst-container inst-types reveal">
+          <div class="inst-type">
+            <span class="inst-type__id">01 / MCQ</span>
+            <span class="inst-type__title">Single answer</span>
+            <p class="inst-type__text">One correct option selected from a set of choices.</p>
+          </div>
+          <div class="inst-type">
+            <span class="inst-type__id">02 / MSQ</span>
+            <span class="inst-type__title">Multiple select</span>
+            <p class="inst-type__text">Several correct options from the same question.</p>
+          </div>
+          <div class="inst-type">
+            <span class="inst-type__id">03 / NAT</span>
+            <span class="inst-type__title">Numerical answer</span>
+            <p class="inst-type__text">A numeric response, with tolerance handled at scoring time.</p>
+          </div>
+          <div class="inst-type">
+            <span class="inst-type__id">04 / Assertion-Reason</span>
+            <span class="inst-type__title">Assertion and reason</span>
+            <p class="inst-type__text">A paired statement and explanation to evaluate.</p>
+          </div>
+          <div class="inst-type">
+            <span class="inst-type__id">05 / Matching</span>
+            <span class="inst-type__title">Matching pairs</span>
+            <p class="inst-type__text">Two columns linked by the relationship between entries.</p>
+          </div>
+          <div class="inst-type">
+            <span class="inst-type__id">06 / Descriptive</span>
+            <span class="inst-type__title">Rich-text long form</span>
+            <p class="inst-type__text">Essay-style questions authored and reviewed with rich text.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="workspace-tools" aria-labelledby="tools-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">06 / Inside the workspace</span></div>
+          <div>
+            <h2 class="inst-section__title" id="tools-title">Find it, fix it, schedule it.</h2>
+            <p class="inst-section__note">
+              Tools that keep a growing question bank usable between mocks.
+            </p>
+          </div>
+        </div>
+        <div class="inst-container inst-principles reveal">
+          <div class="inst-principle">
+            <span class="inst-principle__id">01</span>
+            <div>
+              <span class="inst-principle__title">Global search</span>
+              <p class="inst-principle__text">SQLite FTS5 search spans subjects, chapters, topics, tags, objective questions and descriptive questions, with fuzzy ranking and a command bar.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">02</span>
+            <div>
+              <span class="inst-principle__title">Duplicate review</span>
+              <p class="inst-principle__text">Signature-based similarity detection groups likely duplicates into conflict clusters, with a review workspace and a safe merge path.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">03</span>
+            <div>
+              <span class="inst-principle__title">Study planner</span>
+              <p class="inst-principle__text">Day sessions, an agenda and streaks sit alongside upcoming-exam tracking, so preparation is scheduled rather than improvised.</p>
+            </div>
+          </div>
+          <div class="inst-principle">
+            <span class="inst-principle__id">04</span>
+            <div>
+              <span class="inst-principle__title">Inline rendering</span>
+              <p class="inst-principle__text">LaTeX chemistry renders as MathML inside questions and explanations; diagrams and structures can be attached as images.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="how-it-works" aria-labelledby="how-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">07 / How it works</span></div>
+          <div>
+            <h2 class="inst-section__title" id="how-title">Three steps, all local.</h2>
+          </div>
+        </div>
+        <div class="inst-container inst-rows reveal">
+          <div class="inst-row">
+            <span class="inst-row__id">01</span>
+            <span class="inst-row__title">Install</span>
+            <p class="inst-row__text">Download a 64-bit Windows or Linux build from GitHub Releases. No account is required.</p>
+          </div>
+          <div class="inst-row">
+            <span class="inst-row__id">02</span>
+            <span class="inst-row__title">Practise</span>
+            <p class="inst-row__text">Build a filtered quiz for focused work, or run a full section-based timed mock.</p>
+          </div>
+          <div class="inst-row">
+            <span class="inst-row__id">03</span>
+            <span class="inst-row__title">Review</span>
+            <p class="inst-row__text">Read analytics, then revisit the SRS review queue. The record stays in your workspace.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="download" aria-labelledby="download-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">08 / Download</span></div>
+          <div>
+            <h2 class="inst-section__title" id="download-title">Install from GitHub Releases.</h2>
+            <p class="inst-section__note">
+              ChemPrep by IZMAA Labs ships as native desktop builds for Windows
+              and Linux. Installers are published on GitHub Releases; this page
+              does not host binaries.
+            </p>
+          </div>
+        </div>
+        <div class="inst-container reveal">
+          <div class="inst-install">
+            <div class="inst-install__item">
+              <span class="inst-install__label">01 / Linux — terminal</span>
+              <code class="inst-install__cmd">curl -fsSL https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.sh | bash</code>
+              <p class="inst-install__note">Installer script served from the public releases repository.</p>
+            </div>
+            <div class="inst-install__item">
+              <span class="inst-install__label">02 / Windows — PowerShell</span>
+              <code class="inst-install__cmd">irm https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.ps1 | iex</code>
+              <p class="inst-install__note">Installer script served from the public releases repository.</p>
+            </div>
+          </div>
+          <div class="inst-band">
+            <p class="inst-band__title">All builds</p>
+            <div class="inst-band__body">
+              <p>Windows and Linux builds, 64-bit, are published on GitHub Releases.</p>
+              <div class="inst-band__actions">
+                <a class="inst-btn inst-btn--primary" href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">Browse GitHub Releases</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">09 / Pricing</span></div>
+          <div><h2 class="inst-section__title" id="pricing-title">Pricing is not published yet.</h2></div>
+        </div>
+        <div class="inst-container">
+          <div class="inst-band reveal">
+            <p class="inst-band__title">Pricing / Temporary site</p>
+            <div class="inst-band__body">
+              <p>Pricing is not published on this temporary site yet. Prices will be listed here before public checkout opens.</p>
+              <div class="inst-band__actions">
+                <a class="inst-btn" href="../pricing-contact/index.html">Pricing &amp; Contact Us</a>
+                <a class="inst-text-link" href="../refund-cancellation-policy/index.html">Refund &amp; Cancellation Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="b2b" aria-labelledby="b2b-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">10 / For institutes</span></div>
+          <div><h2 class="inst-section__title" id="b2b-title">Running a Chemistry coaching batch?</h2></div>
+        </div>
+        <div class="inst-container">
+          <div class="inst-band reveal">
+            <p class="inst-band__title">B2B / Enquiries</p>
+            <div class="inst-band__body">
+              <p>
+                Institute and faculty enquiries are welcome: test papers, lab
+                mocks and batch-level weak-topic reports can be described to us
+                as needs. These are enquiries, not shipped features or published
+                pricing.
+              </p>
+              <div class="inst-band__actions">
+                <a class="inst-btn inst-btn--primary" href="../pricing-contact/index.html#b2b">
+                  Book a 10-minute intro conversation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section" id="page-note" aria-labelledby="page-note-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">11 / About this page</span></div>
+          <div>
+            <h2 class="inst-section__title" id="page-note-title">The studio-site entry.</h2>
+            <p class="inst-section__note">
+              This page is the single product page for ChemPrep by IZMAA Labs.
+              Installers and release notes are published on
+              <a href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">GitHub Releases</a>;
+              older release-page links point here. Downloads are never served
+              from this page, and there is no checkout here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="inst-section faq" id="faq" aria-labelledby="faq-title">
+        <div class="inst-container inst-section__head">
+          <div><span class="inst-section__label">12 / FAQ</span></div>
+          <div><h2 class="inst-section__title" id="faq-title">Questions, answered.</h2></div>
+        </div>
+        <div class="inst-container faq__list reveal">
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-video">
+                <span class="inst-faq__q"><span class="inst-faq__id">01</span><span>Does ChemPrep by IZMAA Labs include video courses?</span></span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-video">
+              <div class="faq__a-inner">
+                <p>No. That is intentional. ChemPrep by IZMAA Labs is a practice and analytics workspace, not a video course platform. It is built as a companion to coaching, not a replacement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-internet">
+                <span class="inst-faq__q"><span class="inst-faq__id">02</span><span>Does it need an internet connection?</span></span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-internet">
+              <div class="faq__a-inner">
+                <p>Practice is offline-first: no account, no cloud, no telemetry and no tracking SDKs. Installers are published on GitHub Releases; the app does not need a connection for practice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-laptop">
+                <span class="inst-faq__q"><span class="inst-faq__id">03</span><span>Will it run on my laptop?</span></span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-laptop">
+              <div class="faq__a-inner">
+                <p>ChemPrep by IZMAA Labs is a native desktop app, not a browser tab. Builds for Windows and Linux are 64-bit; see GitHub Releases for available installers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q">
+              <button class="faq__toggle" type="button" aria-expanded="false" aria-controls="faq-a-trial">
+                <span class="inst-faq__q"><span class="inst-faq__id">04</span><span>Is there a free trial?</span></span>
+                <svg class="faq__chevron" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6" /></svg>
+              </button>
+            </h3>
+            <div class="faq__a" id="faq-a-trial">
+              <div class="faq__a-inner">
+                <p>This site does not collect payment and no prices are published yet. See GitHub Releases for available builds; this page does not promise a free tier.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-logo" href="../index.html" aria-label="IZMAA Labs home">
+            <img class="site-logo__glyph site-logo__glyph--footer" src="../assets/izmaalabs-logo.png" alt="" aria-hidden="true" width="34" height="26" />
+            <img class="site-logo__mark site-logo__mark--word" src="../assets/izmaalabs-wordmark-dark.svg" data-wordmark="true" alt="IZMAA Labs" width="78" height="26" />
+          </a>
+          <span class="site-footer__studio">ChemPrep by IZMAA Labs — a focused desktop tool.</span>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="../index.html">Studio</a></li>
+            <li><a href="https://github.com/izmaalabs/chemprep-releases" target="_blank" rel="noopener">Releases</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="../traderpulse/index.html">TraderPulse</a></li>
+          </ul>
+        </nav>
+        <a class="site-footer__mail" href="mailto:izmaalabs@gmail.com">Support: izmaalabs@gmail.com</a>
+      </div>
+      <div class="site-footer__base">
+        <div class="inst-footer-links">
+          <a href="../terms-of-service/index.html">Terms of Service</a>
+          <a href="../privacy-policy/index.html">Privacy Policy</a>
+          <a href="../refund-cancellation-policy/index.html">Refund &amp; Cancellation Policy</a>
+          <a href="../pricing-contact/index.html">Pricing &amp; Contact Us</a>
+          <a href="https://github.com/izmaalabs" target="_blank" rel="noopener">github.com/izmaalabs</a>
+          <a href="https://www.facebook.com/izmaalabs" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/company/izmaalabs/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/izmaalabs" target="_blank" rel="noopener">X</a>
+          <a href="https://www.instagram.com/izmaalabs/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@izmaalabs" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p class="site-credit">© 2026 IZMAA Labs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
