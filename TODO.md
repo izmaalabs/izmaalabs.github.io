@@ -1,11 +1,11 @@
 # TODO — IZMAA Labs site
 
-Branch: `feat/premium-studio-site` (changes currently uncommitted).
+Branch: `feat/premium-studio-site`.
 Canonical site: `https://izmaalabs.github.io/`.
 
 ## High priority — before public launch
 
-- [ ] **P0 — Commit and push current work.** Stale-positioning cleanup, pricing/contact split, sitemap updates and page rewrites are still uncommitted.
+- [ ] **P0 — Push `feat/premium-studio-site` to origin** when the audit-fix commit is ready.
 - [ ] **P0 — Fix broken ChemPrep install links** in `chemprep/index.html`:
   - `https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.sh`
   - `https://raw.githubusercontent.com/izmaalabs/chemprep-releases/main/scripts/install.ps1`
@@ -17,13 +17,10 @@ Canonical site: `https://izmaalabs.github.io/`.
 
 ## Current static site — polish and accessibility
 
-- [ ] Collapsed FAQ answers remain in the accessibility tree despite `aria-expanded="false"`. Apply `hidden`/`inert` toggling and keep `aria-expanded` in sync.
-- [ ] Footer links measure ~18px tall with ~6px gaps. Increase hit targets/spacing (aim for ≥44px targets).
-- [ ] Small labels at 10–11.5px are too small. Raise body-adjacent labels to ≥12–14px.
 - [ ] Harden `.reveal { opacity: 0 }` so content remains visible if JS fails or reduced motion is enabled; gate hiding behind `.js` and respect `prefers-reduced-motion`.
-- [ ] Optimize large PNGs in `assets/` (`DashboardPage.png`, `TaxonomyPage.png`, `izmaalabs-wordmark.png`, etc.) and add `loading="lazy"` / `decoding="async"` where appropriate while retaining width/height attributes.
+- [ ] Optimize/compress large PNGs in `assets/` (`DashboardPage.png`, `TaxonomyPage.png`, `izmaalabs-wordmark.png`, etc.); `loading="lazy"` / `decoding="async"` and `fetchpriority="high"` for LCP images are already in place.
 - [ ] Prune ~171 unused legacy selectors in `styles.css`.
-- [ ] Re-run full browser audit at 360/390/768/1024/1440 px after fixes: axe, horizontal overflow, theme persistence, mobile menu, FAQ, scrollspy, reduced motion, Web Vitals. Browser binary is currently unavailable; no browser was downloaded per prior instruction.
+- [ ] Re-run full browser audit after these fixes: axe, horizontal overflow, theme persistence, mobile menu, FAQ, scrollspy, reduced motion, Web Vitals.
 
 ## Pricing, accounts and checkout — planned content updates
 
@@ -52,12 +49,3 @@ Canonical site: `https://izmaalabs.github.io/`.
 - [ ] Create and publish the `izmaalabs/traderpulse` repository, or permanently remove its Source links.
 - [ ] Register `izmaalabs.com`, configure DNS, then update canonicals, sitemap and social cards.
 - [ ] Add a hosted CMS only if a non-technical editor joins the project.
-- [ ] Reinstall/enable a local Chrome or Brave binary for future browser revalidation.
-
-## Completed this session — context
-
-- [x] Removed stale positioning from all public pages in `site/`.
-- [x] Changed FAQ entries from internet/telemetry questions to licensing questions, including JSON-LD and IDs.
-- [x] Split the merged `pricing-contact` page into `/pricing/` and `/contact/`, updating all links and the sitemap.
-- [x] Removed `izmaalabs.com` registration-status wording from public surfaces.
-- [x] Validated internal links, FAQ anchors, `aria-controls` targets and JSON-LD parsing.

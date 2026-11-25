@@ -130,10 +130,20 @@
   function updateSpy() {
     var pos = window.scrollY + 120;
     var current = null;
+    var atBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2;
+
     sections.forEach(function (section) {
       var top = section.getBoundingClientRect().top + window.scrollY;
       if (top <= pos) current = section;
     });
+
+    /* The last section can sit above the bottom of short pages. */
+    if (atBottom && sections.length) {
+      current = sections[sections.length - 1];
+    }
+
     var activeId = current ? '#' + current.id : null;
     navLinks.forEach(function (link) {
       link.classList.toggle('is-active', link.getAttribute('href') === activeId);
@@ -193,15 +203,36 @@
 
   /* ---------- FAQ accordion ---------- */
   var toggles = Array.prototype.slice.call(document.querySelectorAll('.faq__toggle'));
+
+  function setPanelState(toggle, open) {
+    var item = toggle.closest('.faq__item');
+    var panel = item && item.querySelector('.faq__a');
+    if (!panel) return;
+
+    panel.setAttribute('aria-hidden', String(!open));
+    if (open) {
+      panel.removeAttribute('inert');
+      panel.inert = false;
+    } else {
+      panel.setAttribute('inert', '');
+      panel.inert = true;
+    }
+  }
+
   toggles.forEach(function (toggle) {
+    var ownItem = toggle.closest('.faq__item');
+    setPanelState(toggle, ownItem && ownItem.classList.contains('is-open'));
+
     toggle.addEventListener('click', function () {
       var item = toggle.closest('.faq__item');
       var isOpen = item.classList.contains('is-open');
-      toggles.forEach(function (other, index) {
+      toggles.forEach(function (other) {
         var otherItem = other.closest('.faq__item');
         var shouldClose = otherItem !== item || (otherItem === item && isOpen);
-        otherItem.classList.toggle('is-open', !shouldClose);
-        other.setAttribute('aria-expanded', String(!shouldClose));
+        var open = !shouldClose;
+        otherItem.classList.toggle('is-open', open);
+        other.setAttribute('aria-expanded', String(open));
+        setPanelState(other, open);
       });
     });
   });
